@@ -13,3 +13,7 @@ main = hspec $ do
 
     it "Different values of two outcome types are not equivelent" $ do
       Outcome "Any Craps" 9 == Outcome "Any Craps" 8 `shouldBe` False
+    
+    it "winAmount computes all my monies" $
+      property $ \wager factor -> winAmount (Outcome "_" factor) wager == (wager * factor)
+
