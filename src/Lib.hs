@@ -18,3 +18,4 @@ data Bin = Bin { bins :: Set Outcome } deriving (Show, Eq)
 winAmount :: Outcome -> Integer -> Integer
 winAmount outcome wager = wager * odds outcome
 
+
